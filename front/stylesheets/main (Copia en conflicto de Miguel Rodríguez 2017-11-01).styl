@@ -1,0 +1,57 @@
+@import "fonts.import.styl"
+
+body 
+  background-color black 
+  overflow hidden
+  color white
+  font-family VT323
+  border 0px
+  h1
+    font-size 100px
+    font-weight 300
+    text-align center
+  p
+    font-size 40px
+    text-align center
+  a
+    color red
+    text-decoration none
+  div
+    height 100%
+  .startBox
+    margin-top 0%
+.copy
+  color #00FF00;
+.blink
+  animation: blinker 1s linear infinite
+
+canvas
+  top 0px
+  left 0px
+
+.hud
+  z-index 1
+  position absolute
+  left 10px
+  width 640px
+  height 310px
+  background url(/static/img/hud-bg.png) no-repeat center center
+  *
+    position absolute
+    left 20px
+    width 100px
+    font-size 20px
+    text-align left
+    margin 0px
+  .watch
+    font-family 'DS-Digital'
+    font-size 32px
+    text-align center
+    color #ff6262
+    top 158px
+    height 40px
+    line-height 40px
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}

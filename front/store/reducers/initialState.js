@@ -1,0 +1,68 @@
+export default {
+  level: 1,
+  totalTime: 0,
+  lastFrameTime: 0,
+  lightTint: 0xffffff,
+  timeSpeed: 0.004,
+  night: 0,
+  hud: {
+    time: {
+      h: 11,
+      m: 0,
+    },
+    levels: {
+      sleep: 3,
+      bile: 0,
+      alcohol: 0,
+    },
+  },
+  elevator: {
+    floor: 1,
+    open: 1,
+    opening: false,
+    closing: false,
+    doorSpeed: 0.002,
+  },
+  floors: [
+    {
+      type: 'bar',
+    },
+    {
+      type: 'binPar',
+    },
+    {
+      type: 'binPar',
+    },
+    {
+      type: 'home',
+    },
+  ],
+  player: {
+    floor: 1,
+    programmersFailing: 0,
+    horizontalSpeed: 0,
+    sleeping: false,
+    sleepStart: 0,
+    walking: false,
+    jumping: false,
+    inBed: false,
+    stunned: false,
+    elevator: false,
+    playing: false,
+    coding: false,
+    water: false,
+    empty: false,
+    alarm: false,
+    stunnedByVictor: false,
+    dying: -1,
+    stunnedByBimbo: false,
+    verticalSpeed: 0,
+    speed: 0.2,
+    jumpY: 0,
+    x: -100,
+    y: 0,
+    exploded: false,
+    lastProgrammerFail: 0,
+  },
+  pressedKeys: {},
+};
