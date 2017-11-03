@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'DS-Digital';
+  src: url("/static/fonts/ds_digital/DS-DIGI.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DS-Digital';
+  src: url("/static/fonts/ds_digital/DS-DIGIB.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DS-Digital';
+  src: url("/static/fonts/ds_digital/DS-DIGII.ttf") format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'DS-Digital';
+  src: url("/static/fonts/ds_digital/DS-DIGIT.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  background-color: #000;
+  overflow: hidden;
+  color: #fff;
+  font-family: VT323;
+  border: 0px;
+}
+body h1 {
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+}
+body p {
+  font-size: 40px;
+  text-align: center;
+}
+body a {
+  color: #f00;
+  text-decoration: none;
+}
+body div {
+  height: 100%;
+}
+body .startBox {
+  margin-top: 0%;
+}
+.copy {
+  color: #0f0;
+}
+.blink {
+  animation: blinker 1s linear infinite;
+}
+canvas {
+  top: 0px;
+  left: 0px;
+}
+.hud {
+  z-index: 1;
+  position: absolute;
+  left: 10px;
+  width: 640px;
+  height: 132px;
+  background: url("/static/img/hud-bg.png") no-repeat center center;
+}
+.hud * {
+  position: absolute;
+  margin: 0px;
+}
+.hud .watch {
+  font-family: 'DS-Digital';
+  font-size: 30px;
+  text-align: center;
+  color: #ff6262;
+  top: 27px;
+  left: 518px;
+  width: 100px;
+  height: 38px;
+  line-height: 38px;
+}
+.hud .watch span {
+  display: inline-block;
+  width: 14px;
+  text-align: right;
+  position: initial;
+}
+.hud .level {
+  font-family: 'DS-Digital';
+  font-size: 30px;
+  text-align: center;
+  color: #ff6262;
+  top: 77px;
+  left: 518px;
+  width: 100px;
+  height: 38px;
+  line-height: 38px;
+}
+.hud .levels {
+  left: 151px;
+  height: 7px;
+  width: 338px;
+}
+.hud .levels span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+.hud .levels.sleep {
+  top: 36px;
+}
+.hud .levels.sleep span {
+  background-image: url("/static/img/hud-bar-sleep.png");
+}
+.hud .levels.bile {
+  top: 66px;
+}
+.hud .levels.bile span {
+  background-image: url("/static/img/hud-bar-bilis.png");
+}
+.hud .levels.alcohol {
+  top: 96px;
+}
+.hud .levels.alcohol span {
+  background-image: url("/static/img/hud-bar-alcohol.png");
+}
+@-moz-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
