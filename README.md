@@ -1,6 +1,9 @@
 # SurvivalCTO
 Game developed and designed for our CTO's birthday
 
+# Online version
+[Waiting for deploy]
+
 # How to run
 
 ```
