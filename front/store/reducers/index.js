@@ -21,6 +21,22 @@ export default (state = { ...JSON.parse(JSON.stringify(initialState)) }, { type,
   switch (type) {
     case 'newGame':
       return { ...JSON.parse(JSON.stringify(initialState)), timeSpeed: baseTimeSpeed };
+    case 'scoreUp':
+      return {
+        ...state,
+        hud: {
+          ...state.hud,
+          score: state.hud.score + payload,
+        },
+      };
+    case 'scoreDown':
+      return {
+        ...state,
+        hud: {
+          ...state.hud,
+          score: state.hud.score - payload,
+        },
+      };
     case 'speedUp':
       return { ...state, timeSpeed: fastTimeSpeed };
     case 'slowDown':
@@ -316,6 +332,20 @@ export default (state = { ...JSON.parse(JSON.stringify(initialState)) }, { type,
           jumping = false;
         }
       }
+      let score = state.hud.score;
+      if (dying === -1) {
+        const scoreFrameTime =
+          payload.lastFrameTime * 0.0001 * floors.filter(floor => floor.type === 'binPar').length;
+        if (sleeping) {
+          score -= scoreFrameTime * (state.hud.levels.alcohol + state.hud.levels.sleep) * 10;
+        } else {
+          score +=
+            scoreFrameTime *
+            ((10 - state.hud.levels.sleep) * 5 -
+              state.hud.levels.alcohol * 2 -
+              state.hud.levels.bile * 8);
+        }
+      }
       return {
         ...state,
         night,
@@ -345,6 +375,7 @@ export default (state = { ...JSON.parse(JSON.stringify(initialState)) }, { type,
               0,
             ),
           },
+          score,
         },
         player: {
           ...state.player,

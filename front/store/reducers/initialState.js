@@ -15,6 +15,7 @@ export default {
       bile: 0,
       alcohol: 0,
     },
+    score: 0,
   },
   elevator: {
     floor: 1,

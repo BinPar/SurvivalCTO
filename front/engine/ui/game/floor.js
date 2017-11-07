@@ -289,6 +289,7 @@ export default class Floor {
             player.fx.typing.stop();
             player.fx.errorFixed.play();
             state.player.programmersFailing -= 1;
+            store.dispatch({ type: 'scoreUp', payload: (10 - state.hud.levels.bile) * 10 });
           }
         }
         const lastValue = programmer.on.visible;

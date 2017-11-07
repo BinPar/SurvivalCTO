@@ -21,6 +21,9 @@ const hud = props => (
     <div className="levels alcohol">
       <span style={{ width: `${props.levels.alcohol * 10}%` }} />
     </div>
+    <div>
+      <span style={{ color: 'black' }}>Score: {Math.floor(props.score)}</span>
+    </div>
   </div>
 );
 export default connect(store => ({ ...store.hud, level: store.level }))(hud);

@@ -87,6 +87,7 @@ export default class Victor {
         this.walkX -= 10;
       }
       store.dispatch({ type: 'stop' });
+      store.dispatch({ type: 'scoreDown', payload: state.hud.levels.bile * 20 });
     }
 
     if (state.player.stunnedByVictor && this.num === state.player.floor) {

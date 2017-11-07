@@ -21,7 +21,7 @@ export default () => {
       </Head>
       <div className="startBox">
         <h1>CTO Survival</h1>
-        <p className="copy">&copy; Magonand 2017</p>
+        <p className="copy">&copy; Mgonand 2017</p>
         <p>V 1.1</p>
         <p className="blink">Insert coin</p>
         <p>
