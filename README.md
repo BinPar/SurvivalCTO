@@ -2,7 +2,7 @@
 Game developed and designed for our CTO's birthday
 
 # Online version
-[Waiting for deploy]
+https://survivalcto.binpar.com/
 
 # How to run
 
