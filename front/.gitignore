@@ -58,3 +58,4 @@ dist
 .coverage/
 .DS_Store
 .next/
+.deploy/
